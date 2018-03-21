@@ -17,7 +17,7 @@ class MyClient(discord.Client):
             return
             
         if message.content.startswith(prefix + 'cat'):
-            response = requests.get('https://random.cat/meow')
+            response = requests.get('https://aws.random.cat/meow')
             data = response.json()
             await message.channel.send(data['file'])
 
